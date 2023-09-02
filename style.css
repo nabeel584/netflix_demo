@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #999;
+    
+    
+}
+ul{
+    list-style: none;
+}
+
+/* h1, h2, h3, h4{
+    color: rgb(0, 0, 0);
+} */
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+p{
+    margin: 0.5rem 0;
+}
+img{
+    width: 100%;
+}
+.showcase{
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+
+}
+.showcase_top{
+    object-fit: cover;
+}
+
+.logo{
+    width: 20%;
+    margin: 10px auto;
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    z-index: 2;
+}
+
+.showcase .background{
+    /* margin: 40px auto; */
+    columns: 5;
+    width: 100%;
+    column-gap: 15px;
+    z-index: 5;
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+
+   
+}
+.showcase::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.background .box{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.background .box img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.showcase_content{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.showcase_content h1{
+    font-size: 8rem;
+    width: 100%;
+    color: white;
+    top: -100px;
+    position: relative;
+    left: 50%;
+}
+
+.showcase_content p{
+    font-size: 4rem;
+    position: absolute; 
+    top: 30%;
+    left: 52%;
+    width: 100%;
+    color: white;
+}
+
+.btn_xl{
+    border: 1px solid red;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 3rem;
+    position: relative;
+    left: 50%;
+    top: 100px;
+    border-radius: 10px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.btn_rounded{
+    border: 1px red solid;
+    background: red;
+    color: wheat;
+    z-index: 2;
+    padding: 10px 30px;
+    font-size: 2rem;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.btn_rounded:hover{
+    opacity: 0.5;
+    color: black;
+}
+.btn_xl:hover{
+    opacity: 0.5;
+    color: rgb(0, 0, 0);
+}
